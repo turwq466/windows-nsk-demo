@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0c1b2a" />
+    <meta name="description" content="Демонстрационная страница Окна Нск: окна, монтаж, бесплатный замер и расчёт стоимости." />
+    <title>Окна Нск — теплее дома, тише города</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="demo-ribbon"><span></span>Демонстрационный макет · цены, фото и контакты уточняются</div>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#top" aria-label="Окна Нск, на главную">
+          <span class="brand-mark">ОК</span>
+          <span><strong>ОКНА НСК</strong><small>НОВОСИБИРСК</small></span>
+        </a>
+        <button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false"><i data-lucide="menu"></i></button>
+        <nav class="main-nav" aria-label="Основная навигация">
+          <a href="#calculator">Расчёт</a>
+          <a href="#services">Услуги</a>
+          <a href="#works">Примеры</a>
+          <a href="#dealers">Дилерам</a>
+          <a class="nav-cta" href="#contact">Бесплатный замер <i data-lucide="arrow-up-right"></i></a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-media" role="img" aria-label="Светлая гостиная с панорамным остеклением"></div>
+        <div class="hero-shade"></div>
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <p class="eyebrow"><span></span>Окна и остекление в Новосибирске</p>
+            <h1>Теплее дома.<br /><em>Тише города.</em></h1>
+            <p class="hero-lead">Подберём окна под квартиру, дом или коммерческое помещение. Замеряем, изготовим и установим без лишних этапов.</p>
+            <div class="hero-actions">
+              <a class="button button--accent" href="#calculator">Рассчитать окно <i data-lucide="arrow-up-right"></i></a>
+              <a class="button button--light" href="#works">Посмотреть примеры <i data-lucide="move-down-right"></i></a>
+            </div>
+            <div class="hero-meta"><span><i data-lucide="badge-percent"></i> Скидка до 45%</span><span><i data-lucide="ruler"></i> Бесплатный замер</span></div>
+          </div>
+          <div class="hero-note"><strong>5,0</strong><span>рейтинг в 2ГИС<br />2 филиала в городе</span></div>
+          <a class="hero-scroll" href="#calculator">Листайте к расчёту <i data-lucide="arrow-down"></i></a>
+        </div>
+      </section>
+
+      <section class="trust-strip" aria-label="Преимущества">
+        <div class="container trust-grid">
+          <div><b>01</b><span>Сначала считаем<br />под вашу задачу</span></div>
+          <div><b>02</b><span>Подскажем профиль<br />и стеклопакет</span></div>
+          <div><b>03</b><span>Согласуем сроки<br />до договора</span></div>
+          <div class="trust-accent"><i data-lucide="message-circle"></i><span>Ответим в MAX<br />и пришлём расчёт</span></div>
+        </div>
+      </section>
+
+      <section class="section calculator-section" id="calculator">
+        <div class="container section-head">
+          <div><p class="eyebrow"><span></span>Быстрый расчёт</p><h2>Поймите порядок<br /><em>стоимости за минуту.</em></h2></div>
+          <p class="section-intro">Выберите параметры окна, чтобы получить ориентир. Точную сумму подтвердим после замера и выбора комплектации.</p>
+        </div>
+        <div class="container calculator-layout">
+          <form class="calculator" id="calculatorForm">
+            <div class="form-row"><label>Тип конструкции<select id="windowType"><option value="plastic">Пластиковое окно</option><option value="balcony">Балконный блок</option><option value="door">Пластиковая дверь</option></select></label><label>Стеклопакет<select id="glazing"><option value="1">Однокамерный</option><option value="1.16">Двухкамерный</option><option value="1.28">Энергосберегающий</option></select></label></div>
+            <div class="form-row"><label>Ширина, мм<input id="width" type="number" min="500" max="4000" step="100" value="1400" /></label><label>Высота, мм<input id="height" type="number" min="500" max="3000" step="100" value="1400" /></label></div>
+            <fieldset><legend>Количество створок</legend><div class="segmented"><label><input type="radio" name="sashes" value="1" />1 створка</label><label><input type="radio" name="sashes" value="2" checked />2 створки</label><label><input type="radio" name="sashes" value="3" />3 створки</label></div></fieldset>
+            <label class="check-row"><input id="install" type="checkbox" checked /> <span>Добавить монтаж и вывоз старого окна</span></label>
+            <p class="form-note"><i data-lucide="info"></i> Ориентир нужен для первого разговора. После замера зафиксируем точную комплектацию.</p>
+          </form>
+          <aside class="estimate" aria-live="polite"><div class="estimate-top"><span>Ваш ориентир</span><i data-lucide="calculator"></i></div><strong id="estimateTotal">от 32 800 ₽</strong><div class="estimate-lines"><span><b id="estimateArea">1,96 м²</b> площадь конструкции</span><span><b id="estimateProfile">ПВХ</b> выбранная система</span><span><b id="estimateInstall">включён</b> монтаж</span></div><a class="button button--dark" href="#contact">Получить точный расчёт <i data-lucide="arrow-up-right"></i></a></aside>
+        </div>
+      </section>
+
+      <section class="section services-section" id="services">
+        <div class="container section-head"><div><p class="eyebrow"><span></span>Что делаем</p><h2>Не просто окно.<br /><em>Готовое решение.</em></h2></div><p class="section-intro">Соберём конструкцию под свет, тепло, тишину и сценарий использования — от одной комнаты до остекления объекта.</p></div>
+        <div class="container services-grid">
+          <article class="service-card service-card--featured"><div class="service-index">01</div><i data-lucide="panels-top-left"></i><h3>Окна для дома</h3><p>Пластиковые и энергосберегающие решения для квартир, частных домов и новостроек.</p><a href="#contact">Подобрать профиль <i data-lucide="arrow-up-right"></i></a></article>
+          <article class="service-card"><div class="service-index">02</div><i data-lucide="door-open"></i><h3>Балконы и двери</h3><p>Балконные блоки, входные и межкомнатные двери в едином стиле.</p><a href="#contact">Обсудить задачу <i data-lucide="arrow-up-right"></i></a></article>
+          <article class="service-card"><div class="service-index">03</div><i data-lucide="sun-medium"></i><h3>Остекление</h3><p>Лоджии, террасы и большие проёмы — аккуратный монтаж и понятная смета.</p><a href="#contact">Рассчитать объект <i data-lucide="arrow-up-right"></i></a></article>
+          <article class="service-card"><div class="service-index">04</div><i data-lucide="wrench"></i><h3>Регулировка и ремонт</h3><p>Устраним продувание, заменим уплотнитель, отрегулируем створки.</p><a href="#contact">Вызвать мастера <i data-lucide="arrow-up-right"></i></a></article>
+        </div>
+      </section>
+
+      <section class="section works-section" id="works">
+        <div class="container section-head"><div><p class="eyebrow"><span></span>Примеры сценариев</p><h2>Окна, которые<br /><em>работают на дом.</em></h2></div><p class="section-intro">Фото в макете демонстрационные. После согласования заменим их на реальные объекты, комплектации и отзывы компании.</p></div>
+        <div class="container works-grid"><figure class="work-card work-card--wide"><img src="hero.jpg" alt="Гостиная с панорамными окнами" /><figcaption><span>01 / панорамное остекление</span><strong>Больше света в общей комнате</strong></figcaption></figure><figure class="work-card"><img src="house.jpg" alt="Дом с современными окнами" /><figcaption><span>02 / частный дом</span><strong>Тепло зимой, тише с улицы</strong></figcaption></figure><figure class="work-card"><img src="interior.jpg" alt="Интерьер с чёрными оконными рамами" /><figcaption><span>03 / дизайн-решение</span><strong>Профиль под интерьер</strong></figcaption></figure></div>
+      </section>
+
+      <section class="dealer-section" id="dealers"><div class="container dealer-layout"><div><p class="eyebrow eyebrow--light"><span></span>Для дилеров и застройщиков</p><h2>Отдельные условия<br /><em>для объёма.</em></h2><p>Не смешиваем розничные и оптовые заявки. Зафиксируем комплектации, график поставок, доставку и контакт одного менеджера.</p><a class="button button--accent" href="#contact">Запросить условия <i data-lucide="arrow-up-right"></i></a></div><div class="dealer-points"><div><b>01</b><strong>Прайс под проект</strong><span>Соберём коммерческое предложение под ваши объёмы.</span></div><div><b>02</b><strong>Сроки и логистика</strong><span>Согласуем производство, доставку и монтаж заранее.</span></div><div><b>03</b><strong>Один контакт</strong><span>Менеджер ведёт заявку от расчёта до сдачи объекта.</span></div></div></div></section>
+
+      <section class="section process-section"><div class="container section-head"><div><p class="eyebrow"><span></span>Как это работает</p><h2>Четыре шага<br /><em>до новых окон.</em></h2></div></div><div class="container process-grid"><div><span>01</span><i data-lucide="message-square-text"></i><h3>Опишите задачу</h3><p>Отправьте размеры, фото или просто расскажите, что нужно.</p></div><div><span>02</span><i data-lucide="calculator"></i><h3>Получите ориентир</h3><p>Предложим профиль, стеклопакет и предварительную стоимость.</p></div><div><span>03</span><i data-lucide="ruler"></i><h3>Бесплатный замер</h3><p>Уточним проём, открывания и детали монтажа на месте.</p></div><div class="process-accent"><span>04</span><i data-lucide="check-check"></i><h3>Принимаете результат</h3><p>Изготовим, установим и покажем, как ухаживать за окнами.</p></div></div></section>
+
+      <section class="contact-section" id="contact"><div class="container contact-layout"><div><p class="eyebrow eyebrow--light"><span></span>Следующий шаг</p><h2>Расскажите,<br /><em>что нужно остеклить.</em></h2><p>Ответим в MAX, уточним детали и подготовим ориентир. Никаких звонков без запроса.</p><div class="contact-facts"><span><i data-lucide="map-pin"></i> Новосибирск</span><span><i data-lucide="badge-percent"></i> Скидка до 45%</span><span><i data-lucide="star"></i> Рейтинг 5,0 в 2ГИС</span></div></div><form class="contact-form" id="contactForm"><div class="form-head"><span>Заявка на расчёт</span><span><i data-lucide="lock-keyhole"></i> Только для связи</span></div><label>Ваше имя<input name="name" required placeholder="Например, Анна" /></label><label>Как связаться<input name="contact" required placeholder="Телефон или MAX" /></label><label>Что нужно посчитать<select name="request"><option>Окна для квартиры</option><option>Остекление дома</option><option>Балкон или лоджия</option><option>Условия для дилера</option></select></label><button class="button button--accent button--full" type="submit">Получить расчёт <i data-lucide="arrow-up-right"></i></button><p class="form-footnote">Нажимая кнопку, вы отправляете демонстрационную заявку.</p><p class="form-feedback" id="formFeedback" role="status"></p></form></div></section>
+    </main>
+
+    <footer class="site-footer"><div class="container footer-inner"><div class="brand"><span class="brand-mark">ОК</span><span><strong>ОКНА НСК</strong><small>ДЕМОНСТРАЦИОННЫЙ МАКЕТ</small></span></div><span>Фото, цены и контакты заменяются после согласования</span><a href="#top" aria-label="Наверх"><i data-lucide="arrow-up"></i></a></div></footer>
+    <a class="mobile-cta" href="#calculator">Рассчитать окно <i data-lucide="arrow-up-right"></i></a>
+  </body>
+</html>
